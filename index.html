@@ -1,21 +1,47 @@
-<! Doctype>
-
-<html>
-  <head>
-    <audio id="meuSom" src="yamete.mp3"></audio>
-  </head>
-  <body>
-  <p>
-    TU é gay mano ?
-  </p><br>
-  <button onclick="tocarsom()">Sim</button>
-   <button onclick="tocarsom()">Não</button>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu é Man?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-top: 50px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #ddd;
+        }
+        
+        .som {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tu é gay Man?</h1>
+    <button id="Sim" onclick="tocarSom('sim')">Sim</button>
+    <button id="Não" onclick="tocarSom('nao')">Não</button>
+    <audio id="meuSom" class="som" src="yamete.mp3"></audio>
 
     <script>
-  function tocarSom() {
-    document.getElementById("meuSom").play();
-  }
-</script>
-  </body>
-  
+        function tocarSom(opcao) {
+            document.getElementById("meuSom").play();
+            alert("Você clicou em " + opcao);
+        }
+    </script>
+</body>
 </html>
